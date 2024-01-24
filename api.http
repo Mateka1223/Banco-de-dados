@@ -1,0 +1,52 @@
+###
+GET http://localhost:3000
+
+###
+GET http://localhost:3000/alunos
+
+###
+POST http://localhost:3000/alunos/cadastro
+content-type: application/json
+
+{
+    "matricula": "123",
+    "nome": "Senac",
+    "email": "teste@email.com",
+    "turma": "B",
+    "serie": "1",
+    "sexo": "M",
+    "telefone": "(84) 99810428",
+    "endereco": "Rua do Senac",
+    "responsavel": "Joel"
+}
+
+###
+GET http://localhost:3000/alunos/listarAlunos
+
+###
+GET http://localhost:3000/alunos/buscarAluno/123
+
+###
+PUT  http://localhost:3000/alunos/editarAluno/123
+content-type: application/json
+
+{
+
+    "nome": "Artrobiel",
+    "email": "teste@email.com",
+    "turma": "J",
+    "serie": "1",
+    "sexo": "M",
+    "telefone": "(84) 99810428",
+    "endereco": "Rua do Bill",
+    "responsavel": "Bill"
+}
+
+###
+DELETE  http://localhost:3000/alunos/deletarAluno/123
+
+###
+GET  http://localhost:3000/alunos/formCadastro/123
+
+###
+GET http://localhost:3000/alunos/cadastro

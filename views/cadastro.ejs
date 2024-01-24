@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Alunos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Cadastro de Alunos</h1>
+        </header>
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="/alunos">Listar Alunos</a></li>
+                    <li><a href="/alunos/listarAlunos">Listar Alunos</a></li>
+                    <li><a href="/alunos/formCadastroUser">Cadastro</a></li>
+                </ul>
+            </nav>
+            
+            <form method="post" action="/alunos/Cadastro">
+                Matricula: <input type="text" name="matricula" id="matricula">
+                Nome: <input type="text" name="nome" id=" nome">
+                Email: <input type="text" name="email" id="email">
+                Turma: <input type="text" name="turma" id="turma">
+                Serie: <input type="text" name="serie" id="serie">
+                Sexo: <input type="text" name="sexo" id="sexo">
+                Telefone: <input type="text" name="telefone" id="telefone">
+                Endereço: <input type="text" name="endereco" id="endereco">
+                Responsavel: <input type="text" name="responsavel" id="responsavel">
+                <input type="submit" value="Cadastrar">
+
+            </form>
+        </section>
+    </main>
+</body>
+</html>

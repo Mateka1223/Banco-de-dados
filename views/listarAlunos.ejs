@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Alunos</title>
+</head>
+<body>
+    <header>
+        <h1>Listagem de Alunos</h1>
+    </header>
+    <main>
+
+        <nav>
+            <ul>
+                <li><a href="/alunos">Listar Alunos</a></li>
+                <li><a href="/alunos/listarAlunos">Listar Alunos</a></li>
+                <li><a href="/alunos/formCadastroUser">Cadastro</a></li>
+            </ul>
+        </nav>
+        <section>
+            <h2>Dashboard</h2>
+            <% if(bancoAlunos.length>0){ %>
+            <table>
+                <tr>
+                    <th>Matricula</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Turma</th>
+                    <th>Serie</th>
+                    <th>Sexo</th>
+                    <th>Telefone</th>
+                    <th>Endereço</th>
+                    <th>Responsavel</th>
+                    <th colspan="2">Açôes</th>
+                </tr>
+                <%  bancoAlunos.forEach(aluno =>{  %>
+                <tr>
+                    <td><%=aluno.MATRICULA %></td>
+                    <td><%=aluno.NOME %></td>
+                    <td><%=aluno.EMAIL %></td>
+                    <td><%=aluno.TURMA %></td>
+                    <td><%=aluno.SERIE %></td>
+                    <td><%=aluno.SEXO %></td>
+                    <td><%=aluno.TELEFONE %></td>
+                    <td><%=aluno.ENDERECO %></td>
+                    <td><%=aluno.RESPONSAVEL %></td>
+                    <td><a href="/alunos/editarAluno/<%= aluno.MATRICULA %>">Editar</a></td>
+                    <td><a href="/alunos/deletarAluno/<%= aluno.MATRICULA %>">Remover</a></td>
+                </tr>
+                <% }); %>
+
+            </table>
+
+           <% }else{ %>
+            <p><b>Nenhum registro cadastrado</b></p>
+            <% } %> 
+        </section>
+    </main>
+</body>
+</html>
